@@ -7,11 +7,17 @@ import ReseniaList from './componentes/ReseniaList'
 
   //crear estado para arreglo de resenias
   const [ lista_resenias, setListaResenias ] = useState(Resenias)
-  console.log(lista_resenias)
+
+  //metodo para borrar resenia
+  const deleteResenia = id => {
+    window.confirm("estas seguro de borrar la reseña")
+  }
 
   return (
     <div className="container">
-      <ReseniaList listaresenias={lista_resenias}/>
+      <ReseniaList 
+        deleteResenia={deleteResenia}
+        listaresenias={lista_resenias}/>
     </div>
   )
 }
